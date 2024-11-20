@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "home": "Home",
+    "menu": "Menu",
+    "gallery": "Gallery",
+    "reviews": "Reviews",
+    "contact": "Contact"
+  },
+  "home": {
+    "welcome": "Welcome to Fish & Chips Jaffa Port",
+    "description": "Authentic British fish and chips in the heart of Jaffa Port"
+  },
+  "menu": {
+    "title": "Our Menu",
+    "categories": {
+      "fish": "Fish",
+      "chips": "Chips",
+      "sides": "Sides",
+      "drinks": "Drinks"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email"
+  }
+} 
