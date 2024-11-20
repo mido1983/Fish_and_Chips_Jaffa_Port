@@ -57,6 +57,7 @@ function LanguageSwitcher() {
 
   const handleLanguageChange = (lang) => {
     i18n.changeLanguage(lang);
+    document.dir = ['he', 'ar'].includes(lang) ? 'rtl' : 'ltr';
     setIsOpen(false);
   };
 

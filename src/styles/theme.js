@@ -5,6 +5,7 @@ export const theme = {
     white: '#FFFFFF',
     black: '#000000',
     gray: '#F5F5F5',
+    text: '#4A4A4A',
   },
   fonts: {
     primary: "'Arial', sans-serif",

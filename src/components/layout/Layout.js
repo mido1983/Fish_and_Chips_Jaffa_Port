@@ -1,30 +1,31 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+import { Container, Row, Col } from 'react-bootstrap';
 import Header from '../common/Header/Header';
 import Footer from '../common/Footer/Footer';
 import styled from 'styled-components';
 
-const LayoutWrapper = styled.div`
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+const MainContent = styled.main`
+  min-height: calc(100vh - 160px); // Adjust based on header/footer height
+  padding: ${({ theme }) => theme.spacing.medium} 0;
 `;
 
-const Main = styled.main`
-  flex: 1;
-  background-color: #FFFFFF;
-`;
-
-function Layout() {
+const Layout = () => {
   return (
-    <LayoutWrapper>
+    <>
       <Header />
-      <Main>
-        <Outlet />
-      </Main>
+      <MainContent>
+        <Container fluid>
+          <Row>
+            <Col>
+              <Outlet />
+            </Col>
+          </Row>
+        </Container>
+      </MainContent>
       <Footer />
-    </LayoutWrapper>
+    </>
   );
-}
+};
 
 export default Layout; 
