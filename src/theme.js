@@ -1,10 +1,12 @@
-export const theme = {
+const theme = {
   colors: {
-    primary: '#000000',
-    secondary: '#ffffff',
-    // Add more colors as needed
+    white: '#FFFFFF',
+    black: '#000000',
+    primary: '#1E90FF', // Example color, adjust as needed
   },
-  // Add more theme properties as needed (fonts, spacing, etc.)
+  spacing: {
+    medium: '1rem',
+  }
 };
 
 export default theme; 

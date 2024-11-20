@@ -24,5 +24,16 @@
     "address": "Address",
     "phone": "Phone",
     "email": "Email"
+  },
+  "footer": {
+    "contact": "Contact Us",
+    "address": "Jaffa Port, Tel Aviv-Yafo, Israel",
+    "hours": "Opening Hours",
+    "weekdays": "Sunday-Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "closed": "Closed",
+    "location": "Our Location",
+    "rights": "All rights reserved"
   }
 } 

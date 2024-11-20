@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const SwitcherWrapper = styled.div`
   position: relative;
@@ -27,7 +27,7 @@ const LanguageList = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.gray};
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+  display: ${({ $isOpen }) => ($isOpen ? 'block' : 'none')};
 `;
 
 const LanguageOption = styled.button`
@@ -65,7 +65,7 @@ function LanguageSwitcher() {
       <LanguageButton onClick={() => setIsOpen(!isOpen)}>
         {languages[i18n.language]}
       </LanguageButton>
-      <LanguageList isOpen={isOpen}>
+      <LanguageList $isOpen={isOpen}>
         {Object.entries(languages).map(([code, name]) => (
           <LanguageOption
             key={code}

@@ -20,4 +20,21 @@ export const theme = {
     large: '24px',
     xlarge: '32px',
   },
+  direction: {
+    rtl: 'rtl',
+    ltr: 'ltr',
+    start: 'left',
+    end: 'right',
+    padding: {
+      start: 'padding-left',
+      end: 'padding-right'
+    },
+    margin: {
+      start: 'margin-left',
+      end: 'margin-right'
+    },
+    text: {
+      align: 'left'
+    }
+  }
 }; 

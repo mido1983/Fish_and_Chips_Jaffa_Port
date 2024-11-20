@@ -7,6 +7,9 @@ import GalleryPage from './pages/Gallery';
 import ReviewsPage from './pages/Reviews';
 import ContactPage from './pages/Contact';
 import { createApiInstance } from './services/api/config';
+import DirectionProvider from './components/DirectionProvider';
+import { ThemeProvider } from 'styled-components';
+import { theme } from './styles/theme';
 
 function App() {
   const navigate = useNavigate();
@@ -15,15 +18,19 @@ function App() {
   const api = createApiInstance(navigate);
 
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<HomePage />} />
-        <Route path="menu" element={<MenuPage />} />
-        <Route path="gallery" element={<GalleryPage />} />
-        <Route path="reviews" element={<ReviewsPage />} />
-        <Route path="contact" element={<ContactPage />} />
-      </Route>
-    </Routes>
+    <ThemeProvider theme={theme}>
+      <DirectionProvider>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<HomePage />} />
+            <Route path="menu" element={<MenuPage />} />
+            <Route path="gallery" element={<GalleryPage />} />
+            <Route path="reviews" element={<ReviewsPage />} />
+            <Route path="contact" element={<ContactPage />} />
+          </Route>
+        </Routes>
+      </DirectionProvider>
+    </ThemeProvider>
   );
 }
 
