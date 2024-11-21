@@ -2,10 +2,11 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import { Container, Row, Col } from 'react-bootstrap';
+import { IMAGES } from '../constants/imagePaths';
 
 const HeroSection = styled.section`
   height: calc(100vh - 4rem);
-  background-image: url('/images/hero-bg.jpg');
+  background-image: url(${IMAGES.HERO.BACKGROUND});
   background-size: cover;
   background-position: center;
   display: flex;
@@ -14,6 +15,11 @@ const HeroSection = styled.section`
   text-align: center;
   color: white;
   position: relative;
+  margin: 0;
+  padding: 0;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  margin-top: -16px;
 
   &::before {
     content: '';
@@ -110,21 +116,21 @@ const HomePage = () => {
           <Row>
             <Col md={4}>
               <FeatureCard>
-                <img src="/images/fish.jpg" alt="Fresh Fish" />
+              <img src={IMAGES.MENU.FISH} alt="Fish & Chips Jaffa Port" />
                 <h3>{t('menu.categories.fish')}</h3>
                 <p>Fresh daily caught fish from Mediterranean Sea</p>
               </FeatureCard>
             </Col>
             <Col md={4}>
               <FeatureCard>
-                <img src="/images/chips.jpg" alt="Crispy Chips" />
+              <img src={IMAGES.MENU.FISH} alt="Fish & Chips Jaffa Port" />
                 <h3>{t('menu.categories.chips')}</h3>
                 <p>Hand-cut potatoes fried to golden perfection</p>
               </FeatureCard>
             </Col>
             <Col md={4}>
               <FeatureCard>
-                <img src="/images/location.jpg" alt="Jaffa Port" />
+              <img src={IMAGES.MENU.FISH} alt="Fish & Chips Jaffa Port" />
                 <h3>{t('footer.location')}</h3>
                 <p>Located in the historic Jaffa Port</p>
               </FeatureCard>

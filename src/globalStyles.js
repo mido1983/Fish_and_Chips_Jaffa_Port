@@ -5,6 +5,11 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+     scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    &::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
+    }
   }
 
   body {
@@ -13,10 +18,16 @@ const GlobalStyle = createGlobalStyle`
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+        margin: 0;
+    padding: 0;
+    min-height: 100vh;
   }
 
   html, body {
     height: 100%;
+        overflow-x: hidden;
+    width: 100%;
+    position: relative;
   }
 
   #root {
