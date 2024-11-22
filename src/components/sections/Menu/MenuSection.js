@@ -51,7 +51,7 @@ function MenuSection() {
   return (
     <MenuWrapper>
       {categories.map(category => (
-        <div key={category}>
+        <div  key={category}>
           <CategoryTitle>{t(`menu.categories.${category}`)}</CategoryTitle>
           <MenuGrid>
             {menuItems

@@ -6,7 +6,7 @@ export const rtlStyles = css`
 
   /* Навигация */
   nav {
-    flex-direction: row-reverse;
+   // flex-direction: row-reverse;
   }
 
   /* Отступы */

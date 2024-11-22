@@ -6,7 +6,7 @@ export const ltrStyles = css`
 
   /* Навигация */
   nav {
-    flex-direction: row;
+    // flex-direction: row;
   }
 
   /* Отступы */
